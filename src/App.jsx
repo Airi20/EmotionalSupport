@@ -21,7 +21,7 @@ export default function HumanOS() {
     }
     const timeout = setTimeout(() => {
       setLoadingProgress((prev) => prev + 1);
-    }, 100); // 100msで1%ずつ進む。10秒で100%。
+    }, 100);
     return () => clearTimeout(timeout);
   }, [loadingProgress]);
 
@@ -34,50 +34,61 @@ export default function HumanOS() {
   }, [done]);
 
   return (
-    <div style={{
-      fontFamily: "'Segoe UI', Tahoma, Geneva, Verdana, sans-serif",
-      height: "100vh",
-      backgroundColor: "#e0f7fa", // パステルっぽい水色寄りミント
-      color: "#333",
-      display: "flex",
-      flexDirection: "column",
-      justifyContent: "center",
-      alignItems: "center",
-      padding: 20,
-      textAlign: "center",
-    }}>
-      {!done ? (
-        <>
-          <div style={{
-            width: "80%",
-            maxWidth: 400,
-            height: 30,
-            borderRadius: 15,
-            border: "2px solid #a0c4ff",
-            overflow: "hidden",
-            marginBottom: 20,
-          }}>
-            <div style={{
-              width: `${loadingProgress}%`,
-              height: "100%",
-              backgroundColor: "#6699ff",
-              transition: "width 0.1s linear",
-            }} />
-          </div>
-          <p style={{ fontSize: 18 }}>
-            起動中... ゆっくりでいいよ。
-          </p>
-        </>
-      ) : (
-        <>
-          <p style={{ fontSize: 22, fontWeight: "bold", marginBottom: 10 }}>
-            {messages[currentMsgIndex]}
-          </p>
-          <small style={{ color: "#666" }}>
-            by 制作主 😎
-          </small>
-        </>
-      )}
+    <div
+      style={{
+        minHeight: "100vh",
+        background: "linear-gradient(135deg, #fce4ec, #e0f7fa)",
+        display: "flex",
+        justifyContent: "center",
+        alignItems: "center",
+        padding: "20px",
+      }}
+    >
+      <div
+        style={{
+          width: "100%",
+          maxWidth: "400px",
+          backgroundColor: "rgba(255, 255, 255, 0.6)",
+          borderRadius: "16px",
+          padding: "30px 20px",
+          boxShadow: "0 8px 24px rgba(0,0,0,0.1)",
+          textAlign: "center",
+          fontFamily: "'Segoe UI', Tahoma, Geneva, Verdana, sans-serif",
+          color: "#333",
+        }}
+      >
+        {!done ? (
+          <>
+            <div
+              style={{
+                width: "100%",
+                height: 30,
+                borderRadius: 15,
+                border: "2px solid #a0c4ff",
+                overflow: "hidden",
+                marginBottom: 20,
+              }}
+            >
+              <div
+                style={{
+                  width: `${loadingProgress}%`,
+                  height: "100%",
+                  backgroundColor: "#6699ff",
+                  transition: "width 0.1s linear",
+                }}
+              />
+            </div>
+            <p style={{ fontSize: 18 }}>起動中... ゆっくりでいいよ。</p>
+          </>
+        ) : (
+          <>
+            <p style={{ fontSize: 22, fontWeight: "bold", marginBottom: 10 }}>
+              {messages[currentMsgIndex]}
+            </p>
+            <small style={{ color: "#666" }}>by 制作主 😎</small>
+          </>
+        )}
+      </div>
     </div>
   );
 }
