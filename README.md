@@ -30,10 +30,3 @@
 © <span style="color:gray;">@Airi</span>  
 This code is for personal and educational use only.  
 Commercial use is strictly prohibited.
-
-
-
-
-© <span style="color:gray;">@Airi</span>  
-This code is for personal and educational use only.  
-Commercial use is strictly prohibited.
