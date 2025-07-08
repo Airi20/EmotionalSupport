@@ -12,10 +12,13 @@
 「今日ちょっと無理かも」って人も、「まあ、そういう日あるよね」って思ってもらえたら嬉しいです。
 
 
+👉 **[アプリを使ってみる](https://emotional-support-kappa.vercel.app/)**
+
+
 ---
 
 
-起動の遅さを表現しました。<br />
+起動の遅さを表現しました。
 <img src="./slow.jpg" width="300" />
   
 
@@ -23,11 +26,12 @@
 <img src="./miss.jpg" width="300" />  
 
 
-
-👉 **[アプリを使ってみる](https://emotional-support-kappa.vercel.app/)**
-
-
 ---
+© <span style="color:gray;">@Airi</span>  
+This code is for personal and educational use only.  
+Commercial use is strictly prohibited.
+
+
 
 
 © <span style="color:gray;">@Airi</span>  
