@@ -2,7 +2,7 @@
 
 
 <img src="./slow.jpg" width="300" />
-起動の遅さを表現しました。
+起動の遅さを表現しました。<br />  
 
 
 <img src="./miss.jpg" width="300" />  
